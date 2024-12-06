@@ -23,3 +23,17 @@ final balance: 1320.68
 
 """
 
+print("Welcome to lord beelzebub's recurring payment simple intrest calculator!! ")
+def totalCalc(R, r, years):
+    total = 0
+    for year in range(1, years + 1):
+        total = total + R
+        total = total + total * (r / 100)
+        
+    print(f"The final balance is ${round(total,2)}")
+
+R = float(input("enter the annual investment amount: "))
+r = float(input("enter the interest rate (in percentage): "))
+years = int(input("enter the number of years: "))
+
+totalCalc(R, r, years)
